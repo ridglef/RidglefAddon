@@ -1,4 +1,4 @@
-package com.example.addon.commands;
+package uwu.ridglef.cope.systems.commands;
 
 import com.mojang.brigadier.builder.LiteralArgumentBuilder;
 import meteordevelopment.meteorclient.systems.commands.Command;

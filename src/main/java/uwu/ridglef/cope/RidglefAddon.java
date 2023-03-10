@@ -1,8 +1,9 @@
-package com.example.addon;
+package uwu.ridglef.cope;
 
-import com.example.addon.commands.CommandExample;
-import com.example.addon.hud.HudExample;
-import com.example.addon.modules.ModuleExample;
+import uwu.ridglef.cope.systems.Manager;
+import uwu.ridglef.cope.systems.commands.CommandExample;
+import uwu.ridglef.cope.systems.hud.HudExample;
+import uwu.ridglef.cope.systems.modules.ModuleExample;
 import com.mojang.logging.LogUtils;
 import meteordevelopment.meteorclient.addons.MeteorAddon;
 import meteordevelopment.meteorclient.systems.commands.Commands;
@@ -12,23 +13,15 @@ import meteordevelopment.meteorclient.systems.modules.Category;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import org.slf4j.Logger;
 
-public class Addon extends MeteorAddon {
+public class RidglefAddon extends MeteorAddon {
     public static final Logger LOG = LogUtils.getLogger();
     public static final Category CATEGORY = new Category("Example");
     public static final HudGroup HUD_GROUP = new HudGroup("Example");
 
     @Override
     public void onInitialize() {
-        LOG.info("Initializing Meteor Addon Template");
-
-        // Modules
-        Modules.get().add(new ModuleExample());
-
-        // Commands
-        Commands.get().add(new CommandExample());
-
-        // HUD
-        Hud.get().register(HudExample.INFO);
+        LOG.info("Initializing Ridglef Addon. Cope.");
+        Manager.lm();
     }
 
     @Override
@@ -38,6 +31,6 @@ public class Addon extends MeteorAddon {
 
     @Override
     public String getPackage() {
-        return "com.example.addon";
+        return "uwu.ridglef.cope";
     }
 }

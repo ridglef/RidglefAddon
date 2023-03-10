@@ -1,24 +1,24 @@
 {
   "schemaVersion": 1,
-  "id": "addon-template",
+  "id": "ridglef-addon",
   "version": "${version}",
-  "name": "Addon Template",
-  "description": "An addon template for the Meteor addons.",
+  "name": "ridglef addon",
+  "description": "cope",
   "authors": [
-    "seasnail"
+    "ridglef"
   ],
   "contact": {
-    "repo": "https://github.com/MeteorDevelopment/meteor-addon-template"
+    "repo": "https://github.com/ridglef/RidglefAddon"
   },
-  "icon": "assets/template/icon.png",
+  "icon": "assets/ridglef/icon.png",
   "environment": "client",
   "entrypoints": {
     "meteor": [
-      "com.example.addon.Addon"
+      "uwu.ridglef.cope.RidglefAddon"
     ]
   },
   "mixins": [
-    "addon-template.mixins.json"
+    "ridglef-addon.mixins.json"
   ],
   "custom": {
     "meteor-client:color": "225,25,25"
