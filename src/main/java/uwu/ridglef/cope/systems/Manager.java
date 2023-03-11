@@ -9,6 +9,7 @@ import uwu.ridglef.cope.systems.hud.starscript.Presets;
 import uwu.ridglef.cope.systems.hud.starscript.TextAPI;
 import uwu.ridglef.cope.systems.modules.ChatMods;
 import uwu.ridglef.cope.systems.modules.ExternalToggle;
+import uwu.ridglef.cope.systems.modules.HASHMAP;
 import uwu.ridglef.cope.systems.utils.RidglefStarScript;
 
 public class Manager {
@@ -21,6 +22,7 @@ public class Manager {
         // Modules
         m.add(new ChatMods());
         m.add(new ExternalToggle());
+        m.add(new HASHMAP());
         // HUD
         Hud.get().register(TextAPI.INFO);
         Presets.add();
