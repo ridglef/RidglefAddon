@@ -1,8 +1,10 @@
 {
   "required": true,
-  "package": "com.example.addon.mixin",
+  "package": "uwu.ridglef.cope.systems.mixins",
   "compatibilityLevel": "JAVA_17",
-  "client": [],
+  "client": [
+    "ExternalPatch"
+  ],
   "injectors": {
     "defaultRequire": 1
   }

@@ -5,23 +5,24 @@ import meteordevelopment.meteorclient.systems.hud.Hud;
 import meteordevelopment.meteorclient.systems.modules.Modules;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.tutorial.TutorialStep;
-import uwu.ridglef.cope.systems.commands.CommandExample;
-import uwu.ridglef.cope.systems.hud.HudExample;
+import uwu.ridglef.cope.systems.hud.starscript.Presets;
+import uwu.ridglef.cope.systems.hud.starscript.TextAPI;
 import uwu.ridglef.cope.systems.modules.ChatMods;
+import uwu.ridglef.cope.systems.modules.ExternalToggle;
+import uwu.ridglef.cope.systems.utils.RidglefStarScript;
 
 public class Manager {
     public static void lm(){
+        RidglefStarScript.init();
         MinecraftClient.getInstance().getTutorialManager().setStep(TutorialStep.NONE);
         Modules m = new Modules().get();
         Commands c = new Commands().get();
 
         // Modules
         m.add(new ChatMods());
-
-        // Commands
-        c.add(new CommandExample());
-
+        m.add(new ExternalToggle());
         // HUD
-        Hud.get().register(HudExample.INFO);
+        Hud.get().register(TextAPI.INFO);
+        Presets.add();
     }
 }
